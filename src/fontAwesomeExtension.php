@@ -43,12 +43,13 @@ class fontAwesomeExtension extends SimpleExtension
 
     public function fontAwesomeInline($icon = 'fire', $color = 'black', $size = 18)
     {
-        $assetFile = $color . '/' . $icon . '.svg';
+        $assetFile = 'black/' . $icon . '.svg';
         $file = $this->getWebDirectory()->getFile($assetFile)->read();
 
         $svg = new \SimpleXMLElement($file);
 
         $svg['role'] = 'img';
+        $svg['fill'] = $color;
         $svg['width'] = $size;
         $svg['height'] = $size;
         $svg['class'] = 'fa-icon';

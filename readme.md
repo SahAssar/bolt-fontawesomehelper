@@ -12,7 +12,7 @@ It provides two main twig functions, `fa` and `fai`.
 They both take three arguments:
 
 * icon (default: fire): which icon you want. You can see the choices at [fontawesome.io](http://fontawesome.io)
-* color (default: black): either `black` or `white`.
+* color (default: black): either `black` or `white`. When using the inliner the color can be any valid CSS color.
 * size (default: 18): the size in px you want to show the font as. You can override this in your own css if you want.
 
 The icons should work pretty well with screen readers (as opposed to the normal font awesome) since it sets alt-text for the img tags and sets role and aria-label attributes for the inline svg tag.
@@ -27,9 +27,9 @@ Inline the amazon icon:
 
 `{{fai('amazon')}}`
 
-Inline a white google icon at 36px:
+Inline a gold-ish google icon at 36px:
 
-`{{fai('google', 'white', 36)}}`
+`{{fai('google', '#b08643', 36)}}`
 
 Link to a black github icon at 300px:
 
